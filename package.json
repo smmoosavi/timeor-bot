@@ -1,0 +1,12 @@
+{
+  "name": "i-am-in",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "telegraf": "^3.16.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
