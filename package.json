@@ -1,8 +1,11 @@
 {
   "name": "i-am-in",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "npx babel src --out-dir dist"
+  },
   "dependencies": {
     "telegraf": "^3.16.4"
   },
