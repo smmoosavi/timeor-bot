@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "nodemon --exec npx babel-node -- ./src/index.js",
     "start": "node dist/index.js",
-    "build": "npx babel src --out-dir dist"
+    "deploy": "pm2 start dist/index.js -i 1",
+    "build": "babel src --out-dir dist"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "dotenv": "^4.0.0",
     "moment": "^2.19.3",
     "node-emoji": "^1.8.1",
+    "pm2": "^2.8.0",
     "pouchdb-adapter-leveldb": "^6.3.4",
     "ramda": "^0.25.0",
     "rxdb": "^7.2.0",
