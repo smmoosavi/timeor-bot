@@ -1,56 +1,45 @@
-import Markup from 'telegraf/markup'
 import moment from 'moment'
+import emoji from 'node-emoji'
+import Markup from 'telegraf/markup'
+import { createItem, getToday } from './logic'
 
 export function timeHandler (bot) {
   bot.start((ctx) => {
     ctx.reply('Welcome!!!', Markup
       .inlineKeyboard([
-        [Markup.callbackButton('\ud83d\udcbb I am in', 'in'), Markup.callbackButton('\ud83d\ude95 I am out', 'out')], // Row1 with 2 buttons
-        //[Markup.callbackButton('\ud83d\udcdc List', 'list')], // Row1 with 2 buttons
+        [Markup.callbackButton(emoji.emojify(':computer: I am in'), 'in')],
       ])
       .resize()
       .extra())
   })
 
-  function update (ctx) {
+  function update (ctx, type) {
     const row1 = []
-    let text = 'list\n'
-    if (ctx.session.state === 'in') {
-      text += 'you are in'
+    if (type === 'in') {
+      let text = ':computer: you are in\n:stopwatch: ' + moment().format('YYYY-MM-DD hh:mm:ss')
+      row1.push(Markup.callbackButton(emoji.emojify(':taxi: I am out'), 'out'))
+      ctx.editMessageText(emoji.emojify(text))
     }
-    if (ctx.session.state === 'out') {
-      text += 'you are out'
-    }
-    if (ctx.session.state !== 'in') {
-      row1.push(Markup.callbackButton('\ud83d\udcbb I am in', 'in'))
-    }
-    if (ctx.session.state !== 'out') {
-      row1.push(Markup.callbackButton('\ud83d\ude95 I am out', 'out'))
+    if (type === 'out') {
+      let text = ':taxi: you are out\n:stopwatch: ' + moment().format('YYYY-MM-DD hh:mm:ss')
+      row1.push(Markup.callbackButton(emoji.emojify(':computer: I am in'), 'in'))
+      ctx.editMessageText(emoji.emojify(text))
+
+      // const today = getToday(moment())
+      // text = ':spiral_calendar_pad: ' + today + '\n:clipboard: total 4:00 (0.5)'
+      // ctx.reply(emoji.emojify(text))
+
     }
 
-    ctx.editMessageText(text, Markup
+    ctx.reply('update your status', Markup
       .inlineKeyboard([
         row1, // Row1 with 2 buttons
-        //[Markup.callbackButton('\ud83d\udcdc List', 'list')], // Row1 with 2 buttons
+        //[Markup.callbackButton('\ud83d\udcdc List', 'listItems')], // Row1 with 2 buttons
       ])
       .resize()
       .extra())
   }
 
-  const createItem = async (ctx, type) => {
-    const m = moment()
-    const item = {
-      fromId: ctx.from.id,
-      type,
-      time: m.unix(),
-      day: m.clone().add(-4, 'h').format('YYYY-MM-DD'),
-    }
-    await ctx.db.times.insert(item)
-  }
-
-  bot.action('list', (ctx, next) => {
-    update(ctx)
-  })
   bot.action('in', async (ctx, next) => {
     ctx.session.state = 'in'
     await createItem(ctx, 'in')

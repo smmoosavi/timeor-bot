@@ -7,13 +7,17 @@ export const timesSchema = {
       type: 'number',
     },
     type: {
-      type: 'string'
+      type: 'string',
     },
-    time: {
-      type: 'number'
+    timestamp: {
+      type: 'number',
+    },
+    datetime: {
+      type: 'string',
+      index: true,
     },
     day: {
-      type: 'string'
+      type: 'string',
     },
   },
 }
