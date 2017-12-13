@@ -1,5 +1,8 @@
 import moment from 'moment'
 import R from 'ramda'
+import debug from 'debug'
+
+const log = debug('time-bot:time-entity')
 
 export const getToday = (m) => {
   return m.clone()
@@ -26,6 +29,6 @@ export const createItem = async (ctx, type) => {
     day: getToday(m),
   }
   const fromData = R.pick(['first_name', 'last_name'])(ctx.from)
-  console.log(JSON.stringify({...item, ...fromData}))
+  log(JSON.stringify({...item, ...fromData}))
   await ctx.db.times.insert(item)
 }
