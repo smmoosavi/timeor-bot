@@ -2,7 +2,7 @@ import moment from 'moment'
 import R from 'ramda'
 import debug from 'debug'
 
-const log = debug('time-bot:time-entity')
+const log = debug('timeor:time-entity')
 
 export const getToday = (m) => {
   return m.clone()

@@ -1,7 +1,7 @@
 import emoji from 'node-emoji'
 import debug from 'debug'
 
-const log = debug('time-bot:debug-text')
+const log = debug('timeor:debug-text')
 
 export function characterLog (bot) {
   bot.on('text', (ctx, next) => {
