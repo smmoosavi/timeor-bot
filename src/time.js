@@ -2,6 +2,7 @@ import moment from 'moment'
 import emoji from 'node-emoji'
 import Markup from 'telegraf/markup'
 import { saveTime, getDay, getTotal, saveExitTime, saveEnterTime } from './logic'
+import { pad2 } from './utils'
 
 export const timeHandler = (bot) => {
   bot.start(async (ctx) => {
@@ -46,7 +47,7 @@ export const timeHandler = (bot) => {
     const today = getDay(moment())
     const total = await getTotal(ctx, today)
     const totalValue = (total.asHours() / 8).toFixed(2)
-    const totalText = Math.floor(total.asHours()) + ':' + total.minutes() + ':' + total.seconds()
+    const totalText = pad2(Math.floor(total.asHours())) + ':' + pad2(total.minutes()) + ':' + pad2(total.seconds())
     text = `:spiral_calendar_pad: ${today}\n:clipboard: total ${totalText} (${totalValue})`
     await ctx.reply(emoji.emojify(text))
 

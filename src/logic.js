@@ -1,21 +1,9 @@
-import debug from 'debug'
 import moment from 'moment'
 import R from 'ramda'
-
-const log = debug('timeor:time-entity')
 
 export const getDay = (m) => {
   return m.clone()
     .add(-4, 'h').format('YYYY-MM-DD')
-}
-
-export const listItems = async (ctx, day) => {
-  const docs = await ctx.db.times.find()
-    .where('fromId').eq(ctx.from.id)
-    .where('day').eq(day)
-    .sort({'datetime': 1})
-    .exec()
-  return R.map(R.pick(['fromId', 'day', 'datetime', 'timestamp', 'type']))(docs)
 }
 
 export const getTotal = async (ctx, day) => {
@@ -42,7 +30,7 @@ export const saveEnterTime = async (ctx, type, mDate) => {
     const {first_name, last_name, username} = ctx.from
     user = await ctx.db.users.insert({id, first_name, last_name, username, start_timestamp: -1})
   }
-  await user.set('start_timestamp', mDate.unix())
+  await user.set('start_timestamp', mDate.unix()).save()
 }
 export const saveExitTime = async (ctx, type, mDate) => {
   const id = `${ctx.from.id}`
@@ -62,7 +50,7 @@ export const saveExitTime = async (ctx, type, mDate) => {
   if (day !== today) {
     return {error: 'not-same-day'}
   }
-  await user.set('start_timestamp', -1)
+  await user.set('start_timestamp', -1).save()
   await ctx.db.times.insert({fromId: id, start_timestamp, end_timestamp, day})
   return {error: null}
 }

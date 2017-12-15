@@ -10,6 +10,7 @@ export function app () {
     catchError(bot)
     characterLog(bot)
     timeHandler(bot)
+    // listHandler(bot)
     bot.startPolling()
   }
 
