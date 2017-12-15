@@ -1,40 +1,48 @@
 import moment from 'moment'
 import emoji from 'node-emoji'
 import Markup from 'telegraf/markup'
-import { createItem, getToday } from './logic'
+import { createItem, getDay } from './logic'
 
-export function timeHandler (bot) {
-  bot.start((ctx) => {
-    ctx.reply('Welcome!!!', Markup
+export const timeHandler = (bot) => {
+  bot.start(async (ctx) => {
+    await ctx.reply('به روبات تایمُر خوش‌آمدید!!!')
+    await ctx.reply('هر وقت اومدی بگو', Markup
       .inlineKeyboard([
-        [Markup.callbackButton(emoji.emojify(':computer: I am in'), 'in')],
+        [
+          Markup.callbackButton(emoji.emojify(':computer: اومدم'), 'in'),
+        ],
       ])
       .resize()
       .extra())
   })
 
-  function update (ctx, type) {
-    const row1 = []
-    if (type === 'in') {
-      let text = ':computer: you are in\n:stopwatch: ' + moment().format('YYYY-MM-DD hh:mm:ss')
-      row1.push(Markup.callbackButton(emoji.emojify(':taxi: I am out'), 'out'))
-      ctx.editMessageText(emoji.emojify(text))
-    }
-    if (type === 'out') {
-      let text = ':taxi: you are out\n:stopwatch: ' + moment().format('YYYY-MM-DD hh:mm:ss')
-      row1.push(Markup.callbackButton(emoji.emojify(':computer: I am in'), 'in'))
-      ctx.editMessageText(emoji.emojify(text))
+  async function updateIn (ctx) {
+    let text = ':computer: اومدی\n:stopwatch: ' + moment().format('YYYY-MM-DD hh:mm:ss')
+    await ctx.editMessageText(emoji.emojify(text))
 
-      // const today = getToday(moment())
-      // text = ':spiral_calendar_pad: ' + today + '\n:clipboard: total 4:00 (0.5)'
-      // ctx.reply(emoji.emojify(text))
-
-    }
-
-    ctx.reply('update your status', Markup
+    await ctx.reply('هر وقت برفتی بگو', Markup
       .inlineKeyboard([
-        row1, // Row1 with 2 buttons
-        //[Markup.callbackButton('\ud83d\udcdc List', 'listItems')], // Row1 with 2 buttons
+        [
+          Markup.callbackButton(emoji.emojify(':taxi: برفتم'), 'out'),
+        ],
+      ])
+      .resize()
+      .extra())
+  }
+
+  async function updateOut (ctx) {
+    let text = ':taxi: برفتی\n:stopwatch: ' + moment().format('YYYY-MM-DD hh:mm:ss')
+    await ctx.editMessageText(emoji.emojify(text))
+
+    const today = getDay(moment())
+    text = ':spiral_calendar_pad: ' + today + '\n:clipboard: total 4:00 (0.5)'
+    await ctx.reply(emoji.emojify(text))
+
+    await ctx.reply('هر وقت اومدی بگو', Markup
+      .inlineKeyboard([
+        [
+          Markup.callbackButton(emoji.emojify(':computer: اومدم'), 'in'),
+        ],
       ])
       .resize()
       .extra())
@@ -42,13 +50,13 @@ export function timeHandler (bot) {
 
   bot.action('in', async (ctx, next) => {
     ctx.session.state = 'in'
-    await createItem(ctx, 'in')
-    update(ctx, 'in')
+    await createItem(ctx, 'in', moment())
+    await updateIn(ctx)
   })
   bot.action('out', async (ctx, next) => {
     ctx.session.state = 'out'
-    await createItem(ctx, 'out')
-    update(ctx, 'out')
+    await createItem(ctx, 'out', moment())
+    await updateOut(ctx)
   })
 
 }
