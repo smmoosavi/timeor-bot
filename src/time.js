@@ -1,7 +1,7 @@
 import moment from 'moment'
 import emoji from 'node-emoji'
 import Markup from 'telegraf/markup'
-import { createItem, getDay, getTotal } from './logic'
+import { saveTime, getDay, getTotal, saveExitTime, saveEnterTime } from './logic'
 
 export const timeHandler = (bot) => {
   bot.start(async (ctx) => {
@@ -30,14 +30,23 @@ export const timeHandler = (bot) => {
       .extra())
   }
 
-  async function updateOut (ctx) {
+  async function updateOut (ctx, error) {
     let text = ':taxi: برفتی\n:stopwatch: ' + moment().format('YYYY-MM-DD hh:mm:ss')
     await ctx.editMessageText(emoji.emojify(text))
+
+    if (error) {
+      if (error === 'not-started') {
+        await ctx.reply('کی اومدی که الان داری می‌ری؟\nمن که چیزی یادم نمی‌آد')
+      }
+      if (error === 'not-same-day') {
+        await ctx.reply('خیلی وقت پیش اومده بودی، دیگه حسابش از دست من در رفته. خودت ضرب و تقسیم کن.')
+      }
+    }
 
     const today = getDay(moment())
     const total = await getTotal(ctx, today)
     const totalValue = (total.asHours() / 8).toFixed(2)
-    const totalText = Math.floor(total.asHours()) + ':' + total.minutes()
+    const totalText = Math.floor(total.asHours()) + ':' + total.minutes() + ':' + total.seconds()
     text = `:spiral_calendar_pad: ${today}\n:clipboard: total ${totalText} (${totalValue})`
     await ctx.reply(emoji.emojify(text))
 
@@ -52,14 +61,12 @@ export const timeHandler = (bot) => {
   }
 
   bot.action('in', async (ctx, next) => {
-    ctx.session.state = 'in'
-    await createItem(ctx, 'in', moment())
+    await saveEnterTime(ctx, 'in', moment())
     await updateIn(ctx)
   })
   bot.action('out', async (ctx, next) => {
-    ctx.session.state = 'out'
-    await createItem(ctx, 'out', moment())
-    await updateOut(ctx)
+    const {error} = await saveExitTime(ctx, 'out', moment())
+    await updateOut(ctx, error)
   })
 
 }

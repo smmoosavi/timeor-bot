@@ -4,17 +4,13 @@ export const timesSchema = {
   type: 'object',
   properties: {
     fromId: {
-      type: 'number',
-    },
-    type: {
       type: 'string',
     },
-    timestamp: {
+    start_timestamp: {
       type: 'number',
     },
-    datetime: {
-      type: 'string',
-      index: true,
+    end_timestamp: {
+      type: 'number',
     },
     day: {
       type: 'string',

@@ -1,0 +1,137 @@
+[Fri, 15 Dec 2017 18:20:00 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Fri, 15 Dec 2017 18:20:00 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Fri, 15 Dec 2017 18:20:05 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 200
+[Fri, 15 Dec 2017 18:20:37 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Fri, 15 Dec 2017 18:20:37 GMT] [info] [<0.000.0>] database files will be saved to data
+[Fri, 15 Dec 2017 18:20:37 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Fri, 15 Dec 2017 18:20:42 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils 301
+[Fri, 15 Dec 2017 18:20:42 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/ 200
+[Fri, 15 Dec 2017 18:20:42 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/css/styles-a9623008fc27e79da2388441deeacfab.css 200
+[Fri, 15 Dec 2017 18:20:42 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/js/bundle-34997e32896293a1fa5d71f79eb1b4f7.js 200
+[Fri, 15 Dec 2017 18:20:42 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 304
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-site.png 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fauxtonicon5.woff 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362042946 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362042947 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362042948 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362042949 200
+[Fri, 15 Dec 2017 18:20:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 200
+[Fri, 15 Dec 2017 18:20:58 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users/_all_docs?startkey=%22_design%2F%22&endkey=%22_design0%22&include_docs=true&limit=501 200
+[Fri, 15 Dec 2017 18:20:58 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users/_all_docs?limit=21&include_docs=true 200
+[Fri, 15 Dec 2017 18:20:58 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users/_all_docs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362042950 200
+[Fri, 15 Dec 2017 18:21:06 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_active_tasks 200
+[Fri, 15 Dec 2017 18:21:08 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_membership 200
+[Fri, 15 Dec 2017 18:21:08 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_node/node1@127.0.0.1/_config 200
+[Fri, 15 Dec 2017 18:21:10 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs 200
+[Fri, 15 Dec 2017 18:21:10 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator/_all_docs?include_docs=true&limit=100 200
+[Fri, 15 Dec 2017 18:21:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/couchdb-logo.png 200
+[Fri, 15 Dec 2017 18:21:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/github.png 200
+[Fri, 15 Dec 2017 18:21:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/asf-feather-logo.png 200
+[Fri, 15 Dec 2017 18:21:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/twitter.png 200
+[Fri, 15 Dec 2017 18:21:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/googleplus.png 200
+[Fri, 15 Dec 2017 18:21:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/linkedin.png 200
+[Fri, 15 Dec 2017 18:21:16 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_membership 304
+[Fri, 15 Dec 2017 18:21:16 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_membership 304
+[Fri, 15 Dec 2017 18:21:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362042951 200
+[Fri, 15 Dec 2017 18:21:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362042952 200
+[Fri, 15 Dec 2017 18:21:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362042953 200
+[Fri, 15 Dec 2017 18:21:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_active_tasks 304
+[Fri, 15 Dec 2017 18:21:52 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Fri, 15 Dec 2017 18:21:52 GMT] [info] [<0.000.0>] database files will be saved to ./data
+[Fri, 15 Dec 2017 18:21:52 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Fri, 15 Dec 2017 18:22:01 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362042954 200
+[Fri, 15 Dec 2017 18:22:01 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362042955 200
+[Fri, 15 Dec 2017 18:22:01 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362042956 200
+[Fri, 15 Dec 2017 18:22:02 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/ 304
+[Fri, 15 Dec 2017 18:22:02 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/css/styles-a9623008fc27e79da2388441deeacfab.css 304
+[Fri, 15 Dec 2017 18:22:02 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/js/bundle-34997e32896293a1fa5d71f79eb1b4f7.js 304
+[Fri, 15 Dec 2017 18:22:02 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 304
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-site.png 304
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fauxtonicon5.woff 304
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362122950 200
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362122951 200
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362122952 200
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362122953 200
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 304
+[Fri, 15 Dec 2017 18:22:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 200
+[Fri, 15 Dec 2017 18:22:04 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362122954 200
+[Fri, 15 Dec 2017 18:22:04 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362122955 200
+[Fri, 15 Dec 2017 18:22:04 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362122956 200
+[Fri, 15 Dec 2017 18:22:05 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_active_tasks 304
+[Fri, 15 Dec 2017 18:22:06 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_membership 304
+[Fri, 15 Dec 2017 18:22:06 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_node/node1@127.0.0.1/_config 200
+[Fri, 15 Dec 2017 18:22:07 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs 304
+[Fri, 15 Dec 2017 18:22:07 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator/_all_docs?include_docs=true&limit=100 304
+[Fri, 15 Dec 2017 18:22:08 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362122957 200
+[Fri, 15 Dec 2017 18:22:08 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362122958 200
+[Fri, 15 Dec 2017 18:22:08 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362122959 200
+[Fri, 15 Dec 2017 18:23:36 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Fri, 15 Dec 2017 18:23:36 GMT] [info] [<0.000.0>] database files will be saved to ./data/-rxdb-0-times
+[Fri, 15 Dec 2017 18:23:36 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Fri, 15 Dec 2017 18:23:40 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Fri, 15 Dec 2017 18:23:40 GMT] [info] [<0.000.0>] database files will be saved to ./data/-rxdb-0-users
+[Fri, 15 Dec 2017 18:23:40 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Fri, 15 Dec 2017 18:23:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/ 304
+[Fri, 15 Dec 2017 18:23:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/css/styles-a9623008fc27e79da2388441deeacfab.css 304
+[Fri, 15 Dec 2017 18:23:43 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/js/bundle-34997e32896293a1fa5d71f79eb1b4f7.js 304
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 304
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-site.png 304
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fauxtonicon5.woff 304
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362224040 200
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362224041 200
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362224042 200
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 304
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362224043 200
+[Fri, 15 Dec 2017 18:23:44 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 200
+[Fri, 15 Dec 2017 18:23:46 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_active_tasks 304
+[Fri, 15 Dec 2017 18:23:46 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_membership 304
+[Fri, 15 Dec 2017 18:23:46 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_node/node1@127.0.0.1/_config 200
+[Fri, 15 Dec 2017 18:23:47 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs 304
+[Fri, 15 Dec 2017 18:23:47 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator/_all_docs?include_docs=true&limit=100 200
+[Fri, 15 Dec 2017 18:23:58 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5984/
+[Fri, 15 Dec 2017 18:23:58 GMT] [info] [<0.000.0>] database files will be saved to ./data
+[Fri, 15 Dec 2017 18:23:58 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5984/_utils for the Fauxton UI.
+[Fri, 15 Dec 2017 18:24:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362241581 200
+[Fri, 15 Dec 2017 18:24:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362241582 200
+[Fri, 15 Dec 2017 18:24:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362241583 200
+[Fri, 15 Dec 2017 18:24:03 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362241584 200
+[Fri, 15 Dec 2017 18:24:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - PUT /alaki 201
+[Fri, 15 Dec 2017 18:24:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22_design%2F%22&endkey=%22_design0%22&include_docs=true&limit=501 200
+[Fri, 15 Dec 2017 18:24:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?limit=21 200
+[Fri, 15 Dec 2017 18:24:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362241585 200
+[Fri, 15 Dec 2017 18:24:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/couch-watermark.png 200
+[Fri, 15 Dec 2017 18:24:26 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362241586 200
+[Fri, 15 Dec 2017 18:24:26 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362241587 200
+[Fri, 15 Dec 2017 18:24:26 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362241588 200
+[Fri, 15 Dec 2017 18:24:26 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki?_=1513362241589 200
+[Fri, 15 Dec 2017 18:24:27 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22_design%2F%22&endkey=%22_design0%22&include_docs=true&limit=501 304
+[Fri, 15 Dec 2017 18:24:27 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?limit=21 304
+[Fri, 15 Dec 2017 18:24:27 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362241590 200
+[Fri, 15 Dec 2017 18:24:59 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_uuids?count=1 200
+[Fri, 15 Dec 2017 18:24:59 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_uuids?count=1 200
+[Fri, 15 Dec 2017 18:25:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - PUT /alaki/eba08fbe-7c1e-4a01-bc95-7e3997cec68d 201
+[Fri, 15 Dec 2017 18:25:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22_design%2F%22&endkey=%22_design0%22&include_docs=true&limit=501 200
+[Fri, 15 Dec 2017 18:25:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?limit=21 200
+[Fri, 15 Dec 2017 18:25:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362241591 200
+[Fri, 15 Dec 2017 18:25:15 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_index? 200
+[Fri, 15 Dec 2017 18:25:18 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362241592 200
+[Fri, 15 Dec 2017 18:25:18 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362241593 200
+[Fri, 15 Dec 2017 18:25:18 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362241594 200
+[Fri, 15 Dec 2017 18:25:18 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki?_=1513362241595 200
+[Fri, 15 Dec 2017 18:25:19 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_active_tasks 304
+[Fri, 15 Dec 2017 18:25:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1513362241596 200
+[Fri, 15 Dec 2017 18:25:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1513362241597 200
+[Fri, 15 Dec 2017 18:25:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1513362241598 200
+[Fri, 15 Dec 2017 18:25:21 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki?_=1513362241599 200
+[Fri, 15 Dec 2017 18:25:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22_design%2F%22&endkey=%22_design0%22&include_docs=true&limit=501 304
+[Fri, 15 Dec 2017 18:25:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?limit=21 304
+[Fri, 15 Dec 2017 18:25:23 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/_all_docs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1513362241600 200
+[Fri, 15 Dec 2017 18:25:29 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /alaki/eba08fbe-7c1e-4a01-bc95-7e3997cec68d?conflicts=true 200
+[Fri, 15 Dec 2017 18:25:29 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_uuids?count=1 200

@@ -1,7 +1,6 @@
 require('dotenv').config()
 import { createBot } from './bot'
 import { catchError } from './catchError'
-import { listHandler } from './list'
 import { characterLog } from './tests'
 import { timeHandler } from './time'
 
@@ -11,7 +10,6 @@ export function app () {
     catchError(bot)
     characterLog(bot)
     timeHandler(bot)
-    listHandler(bot)
     bot.startPolling()
   }
 
