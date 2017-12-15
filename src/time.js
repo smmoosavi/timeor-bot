@@ -1,7 +1,7 @@
 import moment from 'moment'
 import emoji from 'node-emoji'
 import Markup from 'telegraf/markup'
-import { createItem, getDay } from './logic'
+import { createItem, getDay, getTotal } from './logic'
 
 export const timeHandler = (bot) => {
   bot.start(async (ctx) => {
@@ -35,7 +35,10 @@ export const timeHandler = (bot) => {
     await ctx.editMessageText(emoji.emojify(text))
 
     const today = getDay(moment())
-    text = ':spiral_calendar_pad: ' + today + '\n:clipboard: total 4:00 (0.5)'
+    const total = await getTotal(ctx, today)
+    const totalValue = (total.asHours() / 8).toFixed(2)
+    const totalText = Math.floor(total.asHours()) + ':' + total.minutes()
+    text = `:spiral_calendar_pad: ${today}\n:clipboard: total ${totalText} (${totalValue})`
     await ctx.reply(emoji.emojify(text))
 
     await ctx.reply('هر وقت اومدی بگو', Markup

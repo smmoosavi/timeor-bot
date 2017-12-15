@@ -1,4 +1,5 @@
 import debug from 'debug'
+import moment from 'moment'
 import R from 'ramda'
 
 const log = debug('timeor:time-entity')
@@ -18,7 +19,7 @@ export const listItems = async (ctx, day) => {
 }
 
 export const getTotal = async (ctx, day) => {
-
+  return moment.duration(3 * 60 + 44, 'm')
 }
 
 export const createItem = async (ctx, type, mDate) => {
