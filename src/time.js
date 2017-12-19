@@ -1,8 +1,8 @@
 import moment from 'moment'
 import emoji from 'node-emoji'
 import Markup from 'telegraf/markup'
-import { saveTime, getDay, getTotal, saveExitTime, saveEnterTime } from './logic'
-import { pad2 } from './utils'
+import { getDay, getTotal, saveEnterTime, saveExitTime } from './logic'
+import { calcDurationValue, formatDuration } from './utils'
 
 export const timeHandler = (bot) => {
   bot.start(async (ctx) => {
@@ -46,8 +46,8 @@ export const timeHandler = (bot) => {
 
     const today = getDay(moment())
     const total = await getTotal(ctx, today)
-    const totalValue = (total.asHours() / 8).toFixed(2)
-    const totalText = pad2(Math.floor(total.asHours())) + ':' + pad2(total.minutes()) + ':' + pad2(total.seconds())
+    const totalValue = calcDurationValue(total)
+    const totalText = formatDuration(total)
     text = `:spiral_calendar_pad: ${today}\n:clipboard: total ${totalText} (${totalValue})`
     await ctx.reply(emoji.emojify(text))
 
@@ -68,6 +68,13 @@ export const timeHandler = (bot) => {
   bot.action('out', async (ctx, next) => {
     const {error} = await saveExitTime(ctx, 'out', moment())
     await updateOut(ctx, error)
+  })
+  bot.command('calc', async (ctx, next) => {
+    const inputStr = ctx.update.message.text.split('/calc')[1].trim()
+    const duration = moment.duration(inputStr)
+    const durationValue = calcDurationValue(duration)
+    const durationText = formatDuration(duration)
+    ctx.reply(emoji.emojify(`:clipboard: ${durationText} (${durationValue})`))
   })
 
 }
