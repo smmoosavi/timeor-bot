@@ -20,7 +20,6 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn build
+      - run: tar -zcvf /tmp/dist.tar.gz dist/*
       - store_artifacts:
-          path: dist
-
-
+          path: /tmp/dist.tar.gz
